@@ -1,180 +1,179 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>my word</title>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-	<style>
-		*{
-			margin: 0%;
-			padding: 0%;
-			text-decoration: none;
-			box-sizing: border-box;
-			font-family: sans-serif;
-		}
-		.main{
-			width: 1300px;
-			background-color: aliceblue;
-			
-		}
-		.top{
-			height: 700px;
-			width: 1300px;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My World</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: sans-serif;
+    }
 
-		}
-		.top-img img{
-			width: 1300px;
-			height: 700px;
+    body, html {
+      height: 100%;
+      width: 100%;
+    }
 
-			
-		}
-		.header{
-			height: 80px;
-			width: 1300px;	
-			background-color: rgba(0, 0, 0, 0.3);	
-			position: absolute;
-			top: 0px;
-			left: 0px;
-			
-		}
-		.top-con{
-			width: 90%;
-			margin: auto;
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-		}
-		.logo{
-			height: 80px;
-			width:300px;
-			display: flex;
-			flex-direction: row;
-			align-items: center;
-		}
-		.logo-img img{
-			height: 70px;
-			width: auto;
-		}
-		.logo-name{
-			font-size: 30px;
-			color: white;
-			font-weight: 500;
-		}
-		.logo-name samp{
-			font-size: 28px;
-			color: rgba(255, 255, 255, 0.5);
-			font-weight: bold;
-		}
-		.nev{
-			display: flex;
-			flex-direction: row;
-			justify-content: center;
-			align-items: center;
-			gap: 25px;
-		}
-		.nev a {
-			color: white;
-			font-size: 17px;
-			transition: transform 0.3s ease;
-			display: inline-block;
-		}
+    .main {
+      width: 100%;
+      height: 100%;
+      background-color: aliceblue;
+    }
 
-		.nev a:hover{
-			color: #ffa309;
-			font-weight: 400;
-			font-size: 17px;
-			transform: scale(1.1);
-		}
+    .top {
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
 
-		.fa-magnifying-glass{
-			height: 20px;
-			width: 20px;
-			color: white;
-			cursor: pointer;
-		}
+    .top-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
 
-		.nev-button{
-			height: 40px;
-			width: 130px;
-			border: none;
-			border-radius: 5px;
-			background-color:#ffa309 ;
-			
-		}
-		.nev-button:hover{
-			box-shadow: 0 0 10px #ffa309;			
-		}
-		.nev-button samp{
-			font-size: 15px;
-			font-weight: bold;
-			transition: transform 0.3s ease;
-			display: inline-block;
-		}
-		.nev-button samp:hover{
-			font-size: 17px;
-			transform: scale(1.1);
-		}
+    .header {
+      height: 80px;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.3);
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 10;
+    }
 
-		.top-img-con{
-			width: 1300px;
-			height: 600px;
-			position: absolute;
-			top: 100px;
-			left: 0px;
-	
-		}
-		.india{
-			width: 90%;
-			height: 600px;
-			margin: auto;
-			
-		}
-		.img-text1{
-			font-size:40px;
-			font-weight: 500;
-			text-align: center;
-			color: white;
-			letter-spacing: 5px;
-		}
-		.img-text2{
-			font-size:110px;
-			font-weight: bold;
-			margin-left: 14px;
- 			margin-top: -16px;
-			text-align: center;
-			letter-spacing: 0px;
-		}
-		.loction{
-			height: 400px;
-			width: 500px;
-			position: absolute;
-			top: 200px;
-			left: 2.5%;
-			
-		}
-		.loc-text{
-			color: black;
-			font-size: 32px;
-			letter-spacing: 3px;
-			font-weight: 600;
-		}
-		.loction-box{
-			width: 450px;
-			height: 100px;
-			margin-top: 20px;
-			background-color: black;
-			display: flex;
-			flex-direction: row;
-			justify-content: left;
-			align-items: center;
-			padding: 10px;
-		}
-		.fa-map-location-dot {
-			color: white;
-			margin: 10px;
-		}
-		/* Input box styling */
+    .top-con {
+      width: 90%;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-img img {
+      height: 70px;
+    }
+
+    .logo-name {
+      font-size: 30px;
+      color: white;
+      font-weight: 500;
+    }
+
+    .logo-name samp {
+      font-size: 28px;
+      color: rgba(255, 255, 255, 0.5);
+      font-weight: bold;
+    }
+
+    .nev {
+      display: flex;
+      gap: 25px;
+      align-items: center;
+ 
+    }
+
+    .nev a {
+      color: white;
+      font-size: 17px;
+      transition: all 0.3s ease;
+	  text-decoration: none;
+    }
+
+    .nev a:hover {
+      color: #ffa309;
+      transform: scale(1.1);
+    }
+
+    .fa-magnifying-glass {
+      color: white;
+      cursor: pointer;
+    }
+
+    .nev-button {
+      height: 40px;
+      width: 130px;
+      border: none;
+      border-radius: 5px;
+      background-color: #ffa309;
+      cursor: pointer;
+    }
+
+    .nev-button:hover {
+      box-shadow: 0 0 10px #ffa309;
+    }
+
+    .nev-button samp {
+      font-size: 15px;
+      font-weight: bold;
+    }
+
+    .top-img-con {
+      position: absolute;
+      top: 100px;
+      left: 0;
+      width: 100%;
+    }
+
+    .india {
+      width: 90%;
+      margin: auto;
+      height: auto;
+      text-align: center;
+      color: white;
+    }
+
+    .img-text1 {
+      font-size: 40px;
+      letter-spacing: 5px;
+    }
+
+    .img-text2 {
+      font-size: 110px;
+      font-weight: bold;
+      margin-top: -16px;
+      letter-spacing: 0;
+    }
+
+    .loction {
+      width: 500px;
+      position: absolute;
+      top: 220px;
+      left: 5%;
+      z-index: 20;
+    }
+
+    .loc-text {
+      font-size: 30px;
+      font-weight: bold;
+      margin-bottom: 15px;
+      color: white;
+    }
+
+    .loction-box {
+      background-color: black;
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      border-radius: 8px;
+      gap: 10px;
+    }
+
+    .fa-map-location-dot {
+      color: white;
+      font-size: 24px;
+    }
+
     .input-container {
       position: relative;
       width: 300px;
@@ -184,123 +183,133 @@
       padding: 10px;
       width: 100%;
       height: 50px;
-      border:none;
-      outline: none;
-      font-size: 20px;
-      font-weight: 400;
+      border: none;
       background-color: black;
-      cursor: pointer;
+      font-size: 18px;
       color: white;
+      cursor: pointer;
     }
 
-    /* Options list hidden initially */
     .options {
       display: none;
       position: absolute;
-      top: 40px;
+      top: 50px;
       left: 0;
       width: 100%;
-      border: 1px solid #ccc;
       background-color: white;
       border-radius: 4px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       max-height: 150px;
       overflow-y: auto;
-      opacity: 0;
-      transform: translateY(-10px);
-      transition: opacity 0.3s ease, transform 0.3s ease;
+      z-index: 999;
     }
 
-    /* Show options when input is focused */
-    input[type="text"]:focus + .options {
-      display: block;
-      opacity: 1;
-
-      transform: translateY(0);
-    }
-
-    /* Option list item styling */
     .options li {
       padding: 10px;
       cursor: pointer;
+      color: black;
     }
 
     .options li:hover {
       background-color: #f1f1f1;
     }
-    .d{
-    	color: white;
-    	font-size: 20px;
-    }
 
-	</style>
+    .d {
+      color: white;
+      font-size: 20px;
+      user-select: none;
+    }
+  </style>
 </head>
 <body>
-	<div class="main">
-		<div class="sec-main">
-			<div class="top">
-				<div class="top-img"><img src="india.jpeg"></div>
-				<div class="header">
-					<div class="top-con">
-						<div class="logo">
-							<div class="logo-img"><img src=" logo-removebg-preview.png"></div>
-							<div class="logo-name">Namaste <samp>India</samp></div>
-						</div>
-						<div class="nev">
-							<div><a href="#">HOME</a></div>
-							<div><a href="#">ROOM</a></div>
-							<div><a href="#">PAGES</a></div>
-							<div><a href="#">BLOG</a></div>
-							<div><a href="#">ABOUT US</a></div>
-							<div><a href="#">CONTACT US</a></div>
-							<div ><i class="fa-solid fa-magnifying-glass"></i></div>
-							<button class="nev-button"><samp>BOOK NOW</samp></button>
-						</div>
-					</div>
-				</div>
-				<div class="top-img-con">
-					<div class="india">
-						<div class="img-text1">WELLCOME <div class="img-text2">INDIA</div></div>
-					</div>
-					<div class="loction">
-						<div class="loc-text">WHICH PLECE DO YOU WANT TO VISIT</div>	
-						<div class="loction-box">
-							<div><i class="fa-solid fa-map-location-dot fa-2xl"></i></div>
-							<div class="input-container">
-							    <input type="text" id="input-box" placeholder="Select An Option">
-							    <div class="options">
-								  <ul>
-								    <li>Delhi</li>
-								    <li>Mumbai</li>
-								    <li>Bengaluru</li>
-								    <li>Kolkata</li>
-								    <li>Chennai</li>
-								    <li>Hyderabad</li>
-								    <li>Pune</li>
-								    <li>Ahmedabad</li>
-								    <li>Jaipur</li>
-								    <li>Lucknow</li>
-								    <li>Surat</li>
-								    <li>Kanpur</li>
-								    <li>Nagpur</li>
-								    <li>Indore</li>
-								    <li>Patna</li>
-								    <li>Bhopal</li>
-								    <li>Ludhiana</li>
-								    <li>Agra</li>
-								    <li>Nashik</li>
-								    <li>Vadodara</li>
-								  </ul>
-								</div>
+  <div class="main">
+    <div class="sec-main">
+      <div class="top">
+        <div class="top-img"><img src="india.jpeg" alt="India Image"></div>
 
- 							</div>
- 							<div class="d">▼</div>
+        <div class="header">
+          <div class="top-con">
+            <div class="logo">
+              <div class="logo-img"><img src="logo-removebg-preview.png" alt="Logo"></div>
+              <div class="logo-name">Namaste <samp>India</samp></div>
+            </div>
+            <div class="nev">
+              <a href="#">HOME</a>
+              <a href="#">ROOM</a>
+              <a href="#">PAGES</a>
+              <a href="#">BLOG</a>
+              <a href="#">ABOUT US</a>
+              <a href="#">CONTACT US</a>
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <button class="nev-button"><samp>BOOK NOW</samp></button>
+            </div>
+          </div>
+        </div>
 
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+        <div class="top-img-con">
+          <div class="india">
+            <div class="img-text1">WELCOME</div>
+            <div class="img-text2">INDIA</div>
+          </div>
+
+          <div class="loction">
+            <div class="loc-text">WHICH PLACE DO YOU WANT TO VISIT</div>
+            <div class="loction-box">
+              <i class="fa-solid fa-map-location-dot"></i>
+              <div class="input-container">
+                <input type="text" id="input-box" placeholder="Select a city" readonly>
+                <ul class="options" id="options-list">
+                  <li>Delhi</li>
+                  <li>Mumbai</li>
+                  <li>Bengaluru</li>
+                  <li>Kolkata</li>
+                  <li>Chennai</li>
+                  <li>Hyderabad</li>
+                  <li>Pune</li>
+                  <li>Ahmedabad</li>
+                  <li>Jaipur</li>
+                  <li>Lucknow</li>
+                  <li>Surat</li>
+                  <li>Kanpur</li>
+                  <li>Nagpur</li>
+                  <li>Indore</li>
+                  <li>Patna</li>
+                  <li>Bhopal</li>
+                  <li>Ludhiana</li>
+                  <li>Agra</li>
+                  <li>Nashik</li>
+                  <li>Vadodara</li>
+                </ul>
+              </div>
+              <div class="d" onclick="toggleDropdown()">▼</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const inputBox = document.getElementById('input-box');
+    const optionsList = document.getElementById('options-list');
+
+    function toggleDropdown() {
+      optionsList.style.display = optionsList.style.display === 'block' ? 'none' : 'block';
+    }
+
+    document.addEventListener("click", function (e) {
+      if (!e.target.closest(".input-container") && !e.target.classList.contains("d")) {
+        optionsList.style.display = "none";
+      }
+    });
+
+    document.querySelectorAll(".options li").forEach(item => {
+      item.addEventListener("click", function () {
+        inputBox.value = this.innerText;
+        optionsList.style.display = "none";
+      });
+    });
+  </script>
 </body>
 </html>

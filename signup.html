@@ -1,23 +1,21 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TourX | Sign Up</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Namaste India - Signup</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-  
   <style>
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
-      background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') no-repeat center center fixed;
+      background: url('https://images.unsplash.com/photo-1523978591478-c753949ff840') no-repeat center center fixed;
       background-size: cover;
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
     }
-
     .container {
       background: rgba(0, 0, 0, 0.7);
       padding: 40px 30px;
@@ -26,18 +24,13 @@
       color: white;
       width: 90%;
       max-width: 400px;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-      animation: slideUp 0.7s ease;
     }
-
     h2 {
       margin-bottom: 25px;
       font-size: 28px;
       font-weight: 500;
-      color: #fff;
     }
-
-    input {
+    input, button {
       width: 100%;
       padding: 12px;
       margin: 10px 0;
@@ -45,48 +38,27 @@
       border-radius: 30px;
       outline: none;
       font-size: 16px;
+    }
+    input {
       background-color: rgba(255, 255, 255, 0.2);
       color: white;
-      transition: background-color 0.3s;
     }
-
     input:focus {
       background-color: rgba(255, 255, 255, 0.4);
     }
-
     button {
-      width: 100%;
-      padding: 12px;
-      border: none;
-      background: linear-gradient(135deg, #ff7e5f, #feb47b);
+      background: linear-gradient(135deg, #36d1dc, #5b86e5);
       color: white;
       font-size: 18px;
-      border-radius: 30px;
       cursor: pointer;
-      margin-top: 15px;
-      transition: all 0.3s ease;
     }
-
-    button:hover {
-      background: linear-gradient(135deg, #ff6a36, #ff9f57);
-      transform: translateY(-2px) scale(1.05);
-      box-shadow: 0 6px 18px rgba(255, 126, 95, 0.5);
-    }
-
     .link {
       margin-top: 15px;
-      color: #ffcc99;
+      color: #a0eaff;
     }
-
     .link a {
-      color: #ffcc99;
+      color: #a0eaff;
       text-decoration: none;
-      font-size: 14px;
-    }
-
-    @keyframes slideUp {
-      from { transform: translateY(50px); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
     }
   </style>
 </head>
@@ -94,8 +66,8 @@
   <div class="container">
     <h2>Namaste India पर साइन अप करें</h2>
     <form id="signupForm">
-      <input type="email" id="email" placeholder="ईमेल" required>
-      <input type="password" id="password" placeholder="पासवर्ड" required>
+      <input type="email" id="email" placeholder="ईमेल" required />
+      <input type="password" id="password" placeholder="पासवर्ड" required />
       <button type="submit">साइन अप करें</button>
     </form>
     <div class="link">पहले से खाता है? <a href="login.html">लॉगिन करें</a></div>
@@ -109,7 +81,7 @@
       apiKey: "AIzaSyDEBpiKwKaFz3QDTfuvwZEvvIJhAmMx3mk",
       authDomain: "tourxsagar.firebaseapp.com",
       projectId: "tourxsagar",
-      storageBucket: "tourxsagar.firebasestorage.app",
+      storageBucket: "tourxsagar.appspot.com",
       messagingSenderId: "948168875764",
       appId: "1:948168875764:web:d371b146db691d7f0808a1",
       measurementId: "G-N6J5BXZBZB"
@@ -124,12 +96,12 @@
       const password = document.getElementById("password").value;
 
       createUserWithEmailAndPassword(auth, email, password)
-        .then(() => {
-          alert("साइन अप सफल!");
+        .then((userCredential) => {
+          alert("साइनअप सफल! अब लॉगिन करें।");
           window.location.href = "login.html";
         })
         .catch((error) => {
-          alert(error.message);
+          alert("साइन अप में समस्या: " + error.message);
         });
     });
   </script>

@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Namaste India</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Namaste India - Login</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-  
   <style>
     body {
       margin: 0;
@@ -17,7 +16,6 @@
       align-items: center;
       height: 100vh;
     }
-
     .container {
       background: rgba(0, 0, 0, 0.7);
       padding: 40px 30px;
@@ -29,14 +27,11 @@
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
       animation: slideUp 0.7s ease;
     }
-
     h2 {
       margin-bottom: 25px;
       font-size: 28px;
       font-weight: 500;
-      color: #fff;
     }
-
     input {
       width: 100%;
       padding: 12px;
@@ -47,13 +42,10 @@
       font-size: 16px;
       background-color: rgba(255, 255, 255, 0.2);
       color: white;
-      transition: background-color 0.3s;
     }
-
     input:focus {
       background-color: rgba(255, 255, 255, 0.4);
     }
-
     button {
       width: 100%;
       padding: 12px;
@@ -64,26 +56,16 @@
       border-radius: 30px;
       cursor: pointer;
       margin-top: 15px;
-      transition: all 0.3s ease;
     }
-
-    button:hover {
-      background: linear-gradient(135deg, #ff6a36, #ff9f57);
-      transform: translateY(-2px) scale(1.05);
-      box-shadow: 0 6px 18px rgba(255, 126, 95, 0.5);
-    }
-
     .link {
       margin-top: 15px;
       color: #ffcc99;
     }
-
     .link a {
       color: #ffcc99;
       text-decoration: none;
       font-size: 14px;
     }
-
     @keyframes slideUp {
       from { transform: translateY(50px); opacity: 0; }
       to { transform: translateY(0); opacity: 1; }
@@ -94,8 +76,8 @@
   <div class="container">
     <h2>Namaste India पर लॉगिन करें</h2>
     <form id="loginForm">
-      <input type="email" id="email" placeholder="ईमेल" required>
-      <input type="password" id="password" placeholder="पासवर्ड" required>
+      <input type="email" id="email" placeholder="ईमेल" required />
+      <input type="password" id="password" placeholder="पासवर्ड" required />
       <button type="submit">लॉगिन करें</button>
     </form>
     <div class="link">खाता नहीं है? <a href="signup.html">साइन अप करें</a></div>
@@ -109,7 +91,7 @@
       apiKey: "AIzaSyDEBpiKwKaFz3QDTfuvwZEvvIJhAmMx3mk",
       authDomain: "tourxsagar.firebaseapp.com",
       projectId: "tourxsagar",
-      storageBucket: "tourxsagar.firebasestorage.app",
+      storageBucket: "tourxsagar.appspot.com",
       messagingSenderId: "948168875764",
       appId: "1:948168875764:web:d371b146db691d7f0808a1",
       measurementId: "G-N6J5BXZBZB"
@@ -125,11 +107,10 @@
 
       signInWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
-          // Successful login, redirect to the dashboard
-          window.location.href = "dashboard.html"; // Make sure this page exists
+          window.location.href = "dashboard.html";
         })
         .catch((error) => {
-          alert("लॉगिन में समस्या है: " + error.message);
+          alert("लॉगिन में समस्या: " + error.message);
         });
     });
   </script>
